@@ -91,10 +91,27 @@ export default function HomePage() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden bg-white pt-32 pb-20 lg:pt-40 lg:pb-28">
-        {/* Background decoration */}
+        {/* Background decoration — gradient orbs */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-primary/5 blur-3xl" />
-          <div className="absolute top-1/2 -left-20 w-72 h-72 rounded-full bg-primary-light/5 blur-3xl" />
+          <div className="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full bg-primary/[0.06] blur-[100px] animate-drift-slow" />
+          <div className="absolute top-1/2 -left-32 w-[400px] h-[400px] rounded-full bg-primary-light/[0.05] blur-[80px] animate-drift" />
+          <div className="absolute bottom-0 right-1/4 w-[300px] h-[300px] rounded-full bg-[#a78bfa]/[0.04] blur-[90px]" />
+        </div>
+        {/* Dot grid overlay */}
+        <div className="absolute inset-0 bg-dot-grid pointer-events-none" />
+        {/* Floating geometric shapes */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none hidden lg:block">
+          <div className="absolute top-28 right-[15%] w-4 h-4 rounded-sm border-2 border-primary/15 animate-drift rotate-12" />
+          <div className="absolute top-48 left-[10%] w-3 h-3 rounded-full bg-primary/10 animate-drift-slow" />
+          <div className="absolute top-36 right-[40%] w-2 h-2 rounded-full bg-primary-light/20 animate-drift" style={{ animationDelay: '2s' }} />
+          <div className="absolute bottom-32 left-[20%] w-5 h-5 rounded-sm border-2 border-primary/10 animate-spin-slow" />
+          <div className="absolute bottom-20 right-[30%] w-3 h-3 rounded-full bg-primary/8 animate-drift-slow" style={{ animationDelay: '4s' }} />
+          <svg className="absolute top-44 left-[30%] w-6 h-6 text-primary/10 animate-drift" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} style={{ animationDelay: '3s' }}>
+            <path d="M12 4v16m-8-8h16" />
+          </svg>
+          <svg className="absolute bottom-40 right-[12%] w-5 h-5 text-primary/10 animate-drift-slow" viewBox="0 0 24 24" fill="currentColor" style={{ animationDelay: '1s' }}>
+            <polygon points="12,2 22,20 2,20" />
+          </svg>
         </div>
 
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
@@ -179,8 +196,12 @@ export default function HomePage() {
       </section>
 
       {/* Services Overview */}
-      <section className="py-24 bg-gray-light">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="relative py-24 bg-gray-light overflow-hidden">
+        {/* Subtle grain texture */}
+        <div className="absolute inset-0 bg-grain pointer-events-none" />
+        {/* Gradient orb accent */}
+        <div className="absolute -bottom-32 -right-32 w-[400px] h-[400px] rounded-full bg-primary/[0.03] blur-[80px] pointer-events-none" />
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <AnimateOnScroll className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
               What We Do
@@ -233,8 +254,19 @@ export default function HomePage() {
       </section>
 
       {/* Process Section */}
-      <section className="py-24 bg-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="relative py-24 bg-white overflow-hidden">
+        {/* Dot grid background */}
+        <div className="absolute inset-0 bg-dot-grid pointer-events-none" />
+        {/* Floating shapes */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none hidden lg:block">
+          <div className="absolute top-16 right-[8%] w-3 h-3 rounded-full bg-primary/10 animate-drift" />
+          <div className="absolute bottom-24 left-[5%] w-4 h-4 rounded-sm border-2 border-primary/10 animate-drift-slow rotate-45" />
+          <svg className="absolute top-1/2 right-[5%] w-5 h-5 text-primary/8 animate-spin-slow" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}>
+            <circle cx="12" cy="12" r="8" />
+            <path d="M12 4v2m0 12v2m-8-8h2m12 0h2" />
+          </svg>
+        </div>
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <AnimateOnScroll className="text-center max-w-2xl mx-auto mb-20">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
               We Design to Simplify
@@ -305,8 +337,10 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-24 bg-gray-light">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="relative py-24 bg-gray-light overflow-hidden">
+        <div className="absolute inset-0 bg-grain pointer-events-none" />
+        <div className="absolute top-0 left-1/3 w-[350px] h-[350px] rounded-full bg-primary/[0.03] blur-[100px] pointer-events-none" />
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <AnimateOnScroll className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
               What Our Partners Say
