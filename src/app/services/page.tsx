@@ -1,3 +1,4 @@
+import Image from "next/image";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import Link from "next/link";
 
@@ -30,48 +31,8 @@ const serviceAreas = [
           "Designed to load in 3 seconds, guaranteed. Google SEO optimization to ensure your customers find you.",
       },
     ],
-    icon: (
-      <svg
-        className="w-12 h-12"
-        viewBox="0 0 48 48"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth={1.5}
-      >
-        <rect x="4" y="8" width="40" height="28" rx="4" />
-        <path d="M4 16h40" />
-        <circle cx="10" cy="12" r="1.5" fill="currentColor" stroke="none" />
-        <circle cx="15" cy="12" r="1.5" fill="currentColor" stroke="none" />
-        <circle cx="20" cy="12" r="1.5" fill="currentColor" stroke="none" />
-        <rect x="10" y="22" width="12" height="3" rx="1.5" />
-        <rect x="10" y="28" width="18" height="2" rx="1" opacity="0.5" />
-        <rect x="28" y="20" width="12" height="12" rx="2" />
-        <path d="M16 40h16" strokeLinecap="round" />
-      </svg>
-    ),
-    illustration: (
-      <svg viewBox="0 0 400 280" fill="none" className="w-full" aria-hidden="true">
-        <rect x="30" y="20" width="340" height="240" rx="16" fill="#f8f9fa" stroke="#e2e8f0" strokeWidth="1" />
-        {/* Browser window */}
-        <rect x="60" y="50" width="280" height="180" rx="10" fill="white" stroke="#e2e8f0" strokeWidth="1" />
-        <rect x="60" y="50" width="280" height="30" rx="10" fill="#f0f0f5" />
-        <rect x="60" y="72" width="280" height="8" fill="#f0f0f5" />
-        <circle cx="78" cy="65" r="4" fill="#ff6b6b" opacity="0.7" />
-        <circle cx="90" cy="65" r="4" fill="#ffd93d" opacity="0.7" />
-        <circle cx="102" cy="65" r="4" fill="#6BCB77" opacity="0.7" />
-        {/* Page content mockup */}
-        <rect x="76" y="92" width="120" height="8" rx="4" fill="#6C5CE7" opacity="0.3" />
-        <rect x="76" y="108" width="180" height="5" rx="2.5" fill="#e2e8f0" />
-        <rect x="76" y="118" width="160" height="5" rx="2.5" fill="#e2e8f0" />
-        <rect x="76" y="132" width="80" height="24" rx="12" fill="#6C5CE7" opacity="0.2" />
-        <rect x="76" y="168" width="100" height="48" rx="6" fill="#f8f9fa" stroke="#e2e8f0" strokeWidth="1" />
-        <rect x="190" y="168" width="100" height="48" rx="6" fill="#f8f9fa" stroke="#e2e8f0" strokeWidth="1" />
-        {/* Speed indicator */}
-        <circle cx="330" cy="180" r="24" stroke="#6C5CE7" strokeWidth="3" opacity="0.2" />
-        <path d="M330 156 A24 24 0 1 1 306 180" stroke="#6C5CE7" strokeWidth="3" strokeLinecap="round" />
-        <text x="330" y="184" textAnchor="middle" fontSize="10" fontWeight="700" fill="#6C5CE7" fontFamily="system-ui">3s</text>
-      </svg>
-    ),
+    iconSrc: "/images/icon-interface.png",
+    illustrationSrc: "/images/hero-website.png",
   },
   {
     tagline: "Stay In Touch",
@@ -95,41 +56,8 @@ const serviceAreas = [
           "Targeted campaigns designed to reach the right audience and drive measurable results.",
       },
     ],
-    icon: (
-      <svg
-        className="w-12 h-12"
-        viewBox="0 0 48 48"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth={1.5}
-      >
-        <path d="M8 30V18M16 30V12M24 30V20M32 30V10M40 30V16" strokeLinecap="round" />
-        <path d="M4 36h40" strokeLinecap="round" />
-        <path d="M8 18l8-6 8 8 8-10 8 6" strokeLinecap="round" strokeLinejoin="round" opacity="0.4" />
-      </svg>
-    ),
-    illustration: (
-      <svg viewBox="0 0 400 280" fill="none" className="w-full" aria-hidden="true">
-        <rect x="30" y="20" width="340" height="240" rx="16" fill="#f8f9fa" stroke="#e2e8f0" strokeWidth="1" />
-        {/* Chart bars */}
-        <rect x="70" y="180" width="30" height="50" rx="4" fill="#6C5CE7" opacity="0.2" />
-        <rect x="115" y="150" width="30" height="80" rx="4" fill="#6C5CE7" opacity="0.3" />
-        <rect x="160" y="120" width="30" height="110" rx="4" fill="#6C5CE7" opacity="0.5" />
-        <rect x="205" y="100" width="30" height="130" rx="4" fill="#6C5CE7" opacity="0.7" />
-        <rect x="250" y="70" width="30" height="160" rx="4" fill="#6C5CE7" opacity="0.9" />
-        <rect x="295" y="50" width="30" height="180" rx="4" fill="#6C5CE7" />
-        {/* Growth arrow */}
-        <path d="M85 175 L310 45" stroke="#6C5CE7" strokeWidth="2" strokeDasharray="6 4" opacity="0.4" />
-        <circle cx="310" cy="45" r="6" fill="#6C5CE7" opacity="0.6" />
-        {/* Labels */}
-        <text x="85" y="248" textAnchor="middle" fontSize="9" fill="#a0aec0" fontFamily="system-ui">Jan</text>
-        <text x="130" y="248" textAnchor="middle" fontSize="9" fill="#a0aec0" fontFamily="system-ui">Feb</text>
-        <text x="175" y="248" textAnchor="middle" fontSize="9" fill="#a0aec0" fontFamily="system-ui">Mar</text>
-        <text x="220" y="248" textAnchor="middle" fontSize="9" fill="#a0aec0" fontFamily="system-ui">Apr</text>
-        <text x="265" y="248" textAnchor="middle" fontSize="9" fill="#a0aec0" fontFamily="system-ui">May</text>
-        <text x="310" y="248" textAnchor="middle" fontSize="9" fill="#a0aec0" fontFamily="system-ui">Jun</text>
-      </svg>
-    ),
+    iconSrc: "/images/icon-chart.png",
+    illustrationSrc: "/images/services-mockup.jpg",
   },
   {
     tagline: "Simplify Operations",
@@ -153,50 +81,8 @@ const serviceAreas = [
           "Dashboards and reporting that give you instant access to the data that matters most.",
       },
     ],
-    icon: (
-      <svg
-        className="w-12 h-12"
-        viewBox="0 0 48 48"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth={1.5}
-      >
-        <rect x="6" y="10" width="14" height="12" rx="3" />
-        <rect x="28" y="10" width="14" height="12" rx="3" />
-        <rect x="17" y="28" width="14" height="12" rx="3" />
-        <path d="M13 22v6h5M35 22v6h-8" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    ),
-    illustration: (
-      <svg viewBox="0 0 400 280" fill="none" className="w-full" aria-hidden="true">
-        <rect x="30" y="20" width="340" height="240" rx="16" fill="#f8f9fa" stroke="#e2e8f0" strokeWidth="1" />
-        {/* Workflow nodes */}
-        <rect x="60" y="60" width="80" height="50" rx="10" fill="white" stroke="#6C5CE7" strokeWidth="1.5" opacity="0.8" />
-        <text x="100" y="90" textAnchor="middle" fontSize="10" fill="#6C5CE7" fontFamily="system-ui">Input</text>
-
-        <rect x="160" y="115" width="80" height="50" rx="10" fill="white" stroke="#6C5CE7" strokeWidth="1.5" />
-        <text x="200" y="145" textAnchor="middle" fontSize="10" fill="#6C5CE7" fontFamily="system-ui">Process</text>
-
-        <rect x="260" y="60" width="80" height="50" rx="10" fill="white" stroke="#6C5CE7" strokeWidth="1.5" opacity="0.8" />
-        <text x="300" y="90" textAnchor="middle" fontSize="10" fill="#6C5CE7" fontFamily="system-ui">Output</text>
-
-        <rect x="260" y="170" width="80" height="50" rx="10" fill="white" stroke="#6C5CE7" strokeWidth="1.5" opacity="0.6" />
-        <text x="300" y="200" textAnchor="middle" fontSize="10" fill="#6C5CE7" fontFamily="system-ui">Report</text>
-
-        {/* Connecting arrows */}
-        <path d="M140 85 L160 130" stroke="#6C5CE7" strokeWidth="1.5" opacity="0.4" />
-        <path d="M240 140 L260 90" stroke="#6C5CE7" strokeWidth="1.5" opacity="0.4" />
-        <path d="M240 145 L260 190" stroke="#6C5CE7" strokeWidth="1.5" opacity="0.4" />
-
-        {/* Decorative dots */}
-        <circle cx="100" cy="180" r="4" fill="#6C5CE7" opacity="0.15" />
-        <circle cx="80" cy="200" r="3" fill="#6C5CE7" opacity="0.1" />
-        <circle cx="120" cy="210" r="5" fill="#6C5CE7" opacity="0.1" />
-
-        {/* Gear icon in center */}
-        <circle cx="200" cy="140" r="8" fill="#6C5CE7" opacity="0.1" />
-      </svg>
-    ),
+    iconSrc: "/images/icon-devices.png",
+    illustrationSrc: "/images/icon-rockets.png",
   },
 ];
 
@@ -243,8 +129,14 @@ export default function ServicesPage() {
               <AnimateOnScroll>
                 <div>
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center">
-                      {area.icon}
+                    <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center">
+                      <Image
+                        src={area.iconSrc}
+                        alt={area.title}
+                        width={48}
+                        height={48}
+                        className="w-12 h-12 object-contain"
+                      />
                     </div>
                     <div>
                       <p className="text-sm font-medium text-primary uppercase tracking-wider">
@@ -293,7 +185,13 @@ export default function ServicesPage() {
 
               {/* Illustration */}
               <AnimateOnScroll delay={200}>
-                {area.illustration}
+                <Image
+                  src={area.illustrationSrc}
+                  alt={`${area.title} illustration`}
+                  width={500}
+                  height={350}
+                  className="w-full rounded-2xl shadow-lg object-cover"
+                />
               </AnimateOnScroll>
             </div>
           </div>

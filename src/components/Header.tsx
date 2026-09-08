@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const navLinks = [
@@ -37,37 +38,15 @@ export default function Header() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="flex items-center gap-1">
-              <svg
-                width="36"
-                height="36"
-                viewBox="0 0 36 36"
-                fill="none"
-                className="transition-transform group-hover:scale-105"
-              >
-                <rect
-                  x="2"
-                  y="2"
-                  width="32"
-                  height="32"
-                  rx="8"
-                  fill="#6C5CE7"
-                />
-                <path
-                  d="M10 22L14 14L18 20L22 12L26 22"
-                  stroke="white"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <circle cx="14" cy="14" r="2" fill="white" opacity="0.6" />
-                <circle cx="22" cy="12" r="2" fill="white" opacity="0.6" />
-              </svg>
-              <span className="text-xl font-bold tracking-tight text-foreground">
-                sivit
-              </span>
-            </div>
+          <Link href="/" className="flex items-center group">
+            <Image
+              src="/images/logo.png"
+              alt="Sivit"
+              width={120}
+              height={40}
+              className="h-10 w-auto transition-transform group-hover:scale-105"
+              priority
+            />
           </Link>
 
           {/* Desktop nav */}

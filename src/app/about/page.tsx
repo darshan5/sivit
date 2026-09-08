@@ -1,3 +1,4 @@
+import Image from "next/image";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 export const metadata = {
@@ -159,101 +160,14 @@ export default function AboutPage() {
             </AnimateOnScroll>
 
             <AnimateOnScroll delay={200}>
-              {/* Abstract illustration */}
               <div className="relative">
-                <svg
-                  viewBox="0 0 400 320"
-                  fill="none"
-                  className="w-full"
-                  aria-hidden="true"
-                >
-                  {/* Background shapes */}
-                  <rect
-                    x="40"
-                    y="40"
-                    width="320"
-                    height="240"
-                    rx="20"
-                    fill="#f8f9fa"
-                    stroke="#e2e8f0"
-                    strokeWidth="1"
-                  />
-
-                  {/* Connected nodes suggesting network/collaboration */}
-                  <circle cx="120" cy="120" r="30" fill="#6C5CE7" opacity="0.1" />
-                  <circle cx="120" cy="120" r="12" fill="#6C5CE7" />
-
-                  <circle cx="280" cy="100" r="25" fill="#6C5CE7" opacity="0.1" />
-                  <circle cx="280" cy="100" r="10" fill="#a29bfe" />
-
-                  <circle cx="200" cy="200" r="35" fill="#6C5CE7" opacity="0.1" />
-                  <circle cx="200" cy="200" r="14" fill="#6C5CE7" />
-
-                  <circle cx="320" cy="220" r="20" fill="#6C5CE7" opacity="0.1" />
-                  <circle cx="320" cy="220" r="8" fill="#a29bfe" />
-
-                  <circle cx="80" cy="230" r="22" fill="#6C5CE7" opacity="0.1" />
-                  <circle cx="80" cy="230" r="9" fill="#6C5CE7" />
-
-                  {/* Connecting lines */}
-                  <line
-                    x1="132"
-                    y1="120"
-                    x2="270"
-                    y2="100"
-                    stroke="#6C5CE7"
-                    strokeWidth="1.5"
-                    opacity="0.2"
-                  />
-                  <line
-                    x1="130"
-                    y1="132"
-                    x2="190"
-                    y2="190"
-                    stroke="#6C5CE7"
-                    strokeWidth="1.5"
-                    opacity="0.2"
-                  />
-                  <line
-                    x1="214"
-                    y1="200"
-                    x2="312"
-                    y2="220"
-                    stroke="#6C5CE7"
-                    strokeWidth="1.5"
-                    opacity="0.2"
-                  />
-                  <line
-                    x1="186"
-                    y1="200"
-                    x2="89"
-                    y2="225"
-                    stroke="#6C5CE7"
-                    strokeWidth="1.5"
-                    opacity="0.2"
-                  />
-                  <line
-                    x1="280"
-                    y1="110"
-                    x2="214"
-                    y2="192"
-                    stroke="#6C5CE7"
-                    strokeWidth="1.5"
-                    opacity="0.2"
-                  />
-
-                  {/* Label */}
-                  <text
-                    x="200"
-                    y="280"
-                    textAnchor="middle"
-                    fontSize="11"
-                    fill="#a0aec0"
-                    fontFamily="system-ui"
-                  >
-                    Connected &middot; Collaborative &middot; Creative
-                  </text>
-                </svg>
+                <Image
+                  src="/images/about-hero.jpg"
+                  alt="Sivit team at work"
+                  width={600}
+                  height={400}
+                  className="w-full rounded-2xl shadow-lg object-cover"
+                />
               </div>
             </AnimateOnScroll>
           </div>

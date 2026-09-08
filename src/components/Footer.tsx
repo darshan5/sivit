@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const footerLinks = [
   { href: "/", label: "Home" },
@@ -15,30 +16,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-12 py-16 md:grid-cols-3">
           {/* Brand */}
           <div>
-            <Link href="/" className="inline-flex items-center gap-2 mb-4">
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 36 36"
-                fill="none"
-              >
-                <rect
-                  x="2"
-                  y="2"
-                  width="32"
-                  height="32"
-                  rx="8"
-                  fill="#6C5CE7"
-                />
-                <path
-                  d="M10 22L14 14L18 20L22 12L26 22"
-                  stroke="white"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-              <span className="text-lg font-bold tracking-tight">sivit</span>
+            <Link href="/" className="inline-flex items-center mb-4">
+              <Image
+                src="/images/logo.png"
+                alt="Sivit"
+                width={100}
+                height={34}
+                className="h-8 w-auto brightness-0 invert"
+              />
             </Link>
             <p className="text-white/60 text-sm leading-relaxed max-w-xs">
               Imagine, Design, Implement. We transform your ideas into practical

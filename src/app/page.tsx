@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
-import HeroDashboard from "@/components/HeroDashboard";
 
 const rotatingConcepts = [
   "Create a Reflection of your Business",
@@ -16,68 +16,19 @@ const services = [
     title: "Web Design",
     description:
       "Brand pride and lasting impressions through custom, fast-loading websites optimized for SEO. Sites load within 3 seconds, guaranteed.",
-    icon: (
-      <svg
-        className="w-8 h-8"
-        viewBox="0 0 32 32"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth={1.5}
-      >
-        <rect x="3" y="5" width="26" height="20" rx="3" />
-        <path d="M3 11h26" />
-        <circle cx="7" cy="8" r="1" fill="currentColor" stroke="none" />
-        <circle cx="11" cy="8" r="1" fill="currentColor" stroke="none" />
-        <circle cx="15" cy="8" r="1" fill="currentColor" stroke="none" />
-        <path d="M8 17h6M8 21h10" strokeLinecap="round" />
-        <rect x="20" y="15" width="6" height="8" rx="1" />
-      </svg>
-    ),
+    iconSrc: "/images/icon-interface.png",
   },
   {
     title: "Digital Marketing",
     description:
       "Build your online presence across websites and review platforms. Focus on customer acquisition and positive engagement.",
-    icon: (
-      <svg
-        className="w-8 h-8"
-        viewBox="0 0 32 32"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth={1.5}
-      >
-        <path
-          d="M6 22V14M11 22V10M16 22V16M21 22V8M26 22V12"
-          strokeLinecap="round"
-        />
-        <path
-          d="M4 26h24"
-          strokeLinecap="round"
-        />
-      </svg>
-    ),
+    iconSrc: "/images/icon-chart.png",
   },
   {
     title: "Automation",
     description:
       "Eliminate redundant tasks through system automation, enabling instant data access and business growth.",
-    icon: (
-      <svg
-        className="w-8 h-8"
-        viewBox="0 0 32 32"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth={1.5}
-      >
-        <circle cx="16" cy="16" r="11" />
-        <path d="M16 10v6l4 3" strokeLinecap="round" strokeLinejoin="round" />
-        <path
-          d="M5 5l3 3M27 5l-3 3"
-          strokeLinecap="round"
-        />
-        <path d="M16 2v2M16 28v2" strokeLinecap="round" />
-      </svg>
-    ),
+    iconSrc: "/images/icon-rockets.png",
   },
 ];
 
@@ -110,12 +61,14 @@ const testimonials = [
       "Ability proceeds from a fusion of skills, knowledge, understanding and imagination, consolidated by experience.",
     name: "Luis Desalvo",
     company: "CREO TECH",
+    avatar: "/images/testimonial1.jpg",
   },
   {
     quote:
       "Beauty is when you can appreciate yourself. When you love yourself, that's when you're most beautiful.",
     name: "Shelia McCourtney",
     company: "ARCHITECT",
+    avatar: "/images/testimonial2.jpg",
   },
 ];
 
@@ -212,7 +165,14 @@ export default function HomePage() {
 
             {/* Dashboard illustration */}
             <div className="hidden lg:block">
-              <HeroDashboard />
+              <Image
+                src="/images/hero-website.png"
+                alt="Sivit website mockup"
+                width={600}
+                height={430}
+                className="w-full max-w-lg animate-float rounded-xl shadow-2xl shadow-primary/10"
+                priority
+              />
             </div>
           </div>
         </div>
@@ -234,8 +194,14 @@ export default function HomePage() {
             {services.map((service, i) => (
               <AnimateOnScroll key={service.title} delay={i * 150}>
                 <div className="group relative bg-white rounded-2xl p-8 shadow-sm border border-gray-medium/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1 hover:border-primary/20">
-                  <div className="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 transition-colors group-hover:bg-primary group-hover:text-white">
-                    {service.icon}
+                  <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 transition-colors group-hover:bg-primary">
+                    <Image
+                      src={service.iconSrc}
+                      alt={service.title}
+                      width={32}
+                      height={32}
+                      className="w-8 h-8 object-contain"
+                    />
                   </div>
                   <h3 className="text-xl font-semibold text-foreground mb-3">
                     {service.title}
@@ -363,11 +329,13 @@ export default function HomePage() {
                     &ldquo;{testimonial.quote}&rdquo;
                   </blockquote>
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                      <span className="text-sm font-bold text-primary">
-                        {testimonial.name[0]}
-                      </span>
-                    </div>
+                    <Image
+                      src={testimonial.avatar}
+                      alt={testimonial.name}
+                      width={40}
+                      height={40}
+                      className="w-10 h-10 rounded-full object-cover"
+                    />
                     <div>
                       <p className="text-sm font-semibold text-foreground">
                         {testimonial.name}
