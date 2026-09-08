@@ -83,9 +83,25 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t border-white/10 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-white/40">
-            &copy; 2012&ndash;2024 Sivit Inc. All Rights Reserved.
-          </p>
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+            <p className="text-xs text-white/40">
+              &copy; 2012&ndash;2024 Sivit Inc. All Rights Reserved.
+            </p>
+            <div className="flex gap-4 text-xs">
+              <Link
+                href="/privacy"
+                className="text-white/40 hover:text-white transition-colors"
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                href="/terms"
+                className="text-white/40 hover:text-white transition-colors"
+              >
+                Terms of Service
+              </Link>
+            </div>
+          </div>
           <div className="flex gap-6">
             <a
               href="mailto:info@sivit.com"
