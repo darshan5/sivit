@@ -336,6 +336,88 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Sivit OC Product Spotlight */}
+      <section className="relative py-24 bg-foreground overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute -top-32 right-0 w-[500px] h-[500px] rounded-full bg-primary/10 blur-[120px]" />
+          <div className="absolute bottom-0 -left-20 w-[300px] h-[300px] rounded-full bg-primary-light/10 blur-[80px]" />
+        </div>
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <AnimateOnScroll>
+              <div>
+                <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 mb-6">
+                  <svg className="w-4 h-4 text-primary-light" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                  </svg>
+                  <span className="text-sm font-medium text-primary-light">Product</span>
+                </div>
+                <h2 className="text-3xl sm:text-4xl font-bold text-white">
+                  Sivit OC
+                </h2>
+                <p className="mt-2 text-xl text-primary-light font-medium">
+                  Email Synchronization, Simplified
+                </p>
+                <p className="mt-6 text-white/70 text-lg leading-relaxed">
+                  Sivit OC is a Google Workspace app that keeps your email communications in sync across your team. Connect your inboxes, unify your conversations, and never miss a follow-up.
+                </p>
+                <ul className="mt-8 space-y-4">
+                  {[
+                    "Seamless Gmail & Google Workspace integration",
+                    "Real-time email synchronization across accounts",
+                    "Shared visibility into team communications",
+                    "Simple setup — install directly from Google Workspace Marketplace",
+                  ].map((feature) => (
+                    <li key={feature} className="flex items-start gap-3">
+                      <svg className="w-5 h-5 text-primary-light mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span className="text-white/80">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </AnimateOnScroll>
+
+            <AnimateOnScroll delay={200}>
+              <div className="relative">
+                <div className="rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm p-8 lg:p-10">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-14 h-14 rounded-xl bg-primary/20 flex items-center justify-center">
+                      <svg className="w-8 h-8 text-primary-light" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-white font-semibold text-lg">Sivit OC</h3>
+                      <p className="text-white/50 text-sm">Google Workspace App</p>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    {["Inbox A", "Inbox B", "Inbox C"].map((inbox, i) => (
+                      <div key={inbox} className="flex items-center gap-3 rounded-lg bg-white/5 border border-white/10 px-4 py-3">
+                        <div className={`w-2 h-2 rounded-full ${i === 0 ? "bg-green-400" : i === 1 ? "bg-blue-400" : "bg-amber-400"}`} />
+                        <span className="text-white/70 text-sm flex-1">{inbox}</span>
+                        <svg className="w-4 h-4 text-primary-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                        </svg>
+                        <span className="text-white/40 text-sm">Synced</span>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="mt-6 flex items-center justify-between rounded-lg bg-primary/10 px-4 py-3">
+                    <span className="text-primary-light text-sm font-medium">All emails synchronized</span>
+                    <svg className="w-5 h-5 text-primary-light" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </AnimateOnScroll>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials */}
       <section className="relative py-24 bg-gray-light overflow-hidden">
         <div className="absolute inset-0 bg-grain pointer-events-none" />
